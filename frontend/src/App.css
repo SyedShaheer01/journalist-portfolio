@@ -1,0 +1,144 @@
+.app {
+  min-height: 100vh;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  
+}
+.loader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
+  transition: 0.2s;
+}
+.loader h1{
+  color: rgb(247 200 53);
+  font-weight: 500;
+  font-size: 40px;
+  font-style: italic;
+  /* margin-bottom: 10px; */
+  letter-spacing: 1px;
+}
+.loader h3{
+  font-size: 30px;
+  color:rgb(247 200 53);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+@media (max-Width:600px){
+  .app{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* padding: 10px; */
+  }
+  .loader{
+    margin-top: 50% !important;
+  }
+  
+  .loader h1{
+    font-size: 30px;
+  }
+  .glass{
+    width: 80px;
+  }
+  .loader h3{
+    font-size: 22px;
+  } 
+
+  
+}
+
+.main-heading{
+  background-color: #f5bc13 !important;
+  color: white;
+}
+
+.journalism-box{
+  background-color: #f7f7f705 !important;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+.nav-right ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    
+}
+.nav-right ul li{
+    position: relative;
+}
+
+.nav-right ul li::after{
+    content: '';
+        height: 3px;
+        width: 0;
+        background: #f5bc13;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        transition: 0.5s;
+ }
+ .nav-right ul li:hover::after {
+    width: 100%;
+}
+
+@media (max-Width:800px){
+  .nav-right ul{
+    flex-direction: column; 
+    gap: 15px;
+  }
+
+  
+}
+
+.about-container{
+  display: flex !important;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.about-info{
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column !important;
+  }
+
+  .about-container .about-img {
+    order: 2; /* image comes after text */
+    margin-top: 2rem; /* optional spacing between text and image */
+  }
+   .about-container .about-text {
+    order: 1; /* text comes first */
+    text-align: center;
+  }
+  hr{
+  width: 120px;
+  margin: auto !important;
+  margin-top: 10px !important;
+  border: 2px solid #f5bc13;
+  }
+
+  .about-info{
+    margin-top: 30px !important;
+  }
+}
+
+hr{
+  width: 120px;
+  /* margin: auto; */
+  margin-left: 10px;
+  border: 2px solid #f5bc13;
+  }
+
+
+
