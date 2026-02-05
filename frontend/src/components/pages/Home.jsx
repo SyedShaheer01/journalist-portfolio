@@ -1,6 +1,6 @@
 import Container from "../ui/Container";
-import myImage from '../../assets/images/IMG_0612.JPG-removebg-preview.png'
-import aboutImg from '../../assets/images/IMG_0615.JPG-removebg-preview.png'
+import myImage from '../../assets/images/IMG_0610-removebg-preview-Picsart-AiImageEnhancer.png'
+import aboutImg from '../../assets/images/IMG_0615,JPG.png'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import '../../App.css'
@@ -13,7 +13,7 @@ const Home = () => {
 
     <section className="py-20 bg-[oklch(0.21_0.02_202.83)]">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
           
           {/* Text Content */}
           <div>
@@ -80,8 +80,8 @@ const Home = () => {
           </div>
 
           {/* Visual Area */}
-          <div className=" flex items-center justify-center">
-            <img src={myImage} alt="img" width={400} height={400} />  
+          <div className="flex items-center justify-center">
+            <img src={myImage} alt="img" className="hero-img" />  
           </div>
 
         </div>

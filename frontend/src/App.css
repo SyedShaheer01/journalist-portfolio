@@ -141,4 +141,19 @@ hr{
   }
 
 
+  .hero-img{
+    /* width: 700px; */
+    height: 500px;
+    object-fit: cover;
+    margin-top: -50px;
+  }
+
+
+
+@media (max-width: 768px) {
+  .hero-img{
+    padding-left: 50px;
+    height:300px;
+  }
+}
 

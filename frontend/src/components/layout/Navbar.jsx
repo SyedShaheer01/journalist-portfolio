@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/images/IMG_0621.JPG-removebg-preview.png"
+import logo from "../../assets/images/IMG_0621,JPG.png"
 import '../../App.css'
 
 
