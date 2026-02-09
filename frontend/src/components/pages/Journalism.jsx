@@ -3,12 +3,14 @@
 // import Footer from "../layout/Footer";
 import Container from "../ui/Container";
 import '../../App.css'
+import { Link } from "react-router-dom";
 
 const Journalism = () => {
   const data = {
     news: [
       {
         title: "Breaking News Headline Goes Here",
+        slug: "breaking-news-headline",
         excerpt:
           "A concise but impactful summary highlighting the key facts and context of the news story.",
         date: "Jan 2026",
@@ -18,8 +20,9 @@ const Journalism = () => {
     features: [
       {
         title: "Long-Form Feature Story Title",
+        slug: "long-form-feature-story",
         excerpt:
-          "A narrative-driven feature story that explores people, issues, and deeper context with storytelling depth.",
+          "A narrative-driven feature story that explores people, issues, and deeper context.",
         date: "Dec 2025",
         publication: "Weekly Magazine",
       },
@@ -27,6 +30,7 @@ const Journalism = () => {
     investigative: [
       {
         title: "Investigative Report Title",
+        slug: "investigative-report-title",
         excerpt:
           "An investigative piece focused on accountability, evidence, and public interest journalism.",
         date: "Nov 2025",
@@ -61,6 +65,7 @@ const Journalism = () => {
             {item.excerpt}
           </p>
 
+          <Link to={`/journalism/${item.slug}`}>
           <button className="px-8 py-3
       bg-accent text-black
       border border-[oklch(0.85_0.16_89.69)]
@@ -71,6 +76,7 @@ const Journalism = () => {
       hover:bg-[oklch(0.85_0.16_89.69)]">
             Read full story →
           </button>
+        </Link>
         </article>
       ))}
     </div>
@@ -121,3 +127,21 @@ const Journalism = () => {
 };
 
 export default Journalism;
+
+
+
+
+
+
+
+// px-8 py-3
+//       bg-accent text-black
+//       border border-[oklch(0.85_0.16_89.69)]
+//       rounded-[20px]
+//       cursor-pointer
+//       text-sm
+//       transition-colors duration-500
+//       hover:bg-[oklch(0.85_0.16_89.69)]
+
+
+//  text-[oklch(0.85_0.16_89.69)]

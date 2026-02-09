@@ -102,7 +102,7 @@ const Home = () => {
   <h2 className="font-heading font-bold text-3xl mb-1 text-[oklch(0.85_0.16_89.69)]">
     About Me
   </h2>
-    <hr />
+    <hr className="about-hr" />
 
 </div>
 

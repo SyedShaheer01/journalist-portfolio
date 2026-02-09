@@ -52,6 +52,8 @@
   
 }
 
+/* journalism */
+
 .main-heading{
   background-color: #f5bc13 !important;
   color: white;
@@ -60,7 +62,19 @@
 .journalism-box{
   background-color: #f7f7f705 !important;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 
+
+}
+.journalism-box:hover{
+  transform: translateY(-12px);
+  transition: 1s all;
+
+}
+
+.bullet::before {
+  content: "•";
+  margin-right: 8px;
 }
 
 .nav-right ul{
@@ -121,7 +135,7 @@
     order: 1; /* text comes first */
     text-align: center;
   }
-  hr{
+  .about-hr{
   width: 120px;
   margin: auto !important;
   margin-top: 10px !important;
@@ -133,13 +147,25 @@
   }
 }
 
-hr{
+
+.about-hr{
   width: 120px;
   /* margin: auto; */
   margin-left: 10px;
   border: 2px solid #f5bc13;
   }
-
+.article-hr{
+  width: 120px;
+  /* margin: auto; */
+  margin-left: 15px;
+  border: 2px solid #f5bc13;
+  }
+  .copywriting-hr{
+     width: 280px;
+  /* margin: auto; */
+  margin-left: 15px;
+  border: 2px solid #f5bc13;
+  }
 
   .hero-img{
     /* width: 700px; */
@@ -155,5 +181,19 @@ hr{
     padding-left: 50px;
     height:300px;
   }
+}
+
+
+.custom-gradient{
+   background: linear-gradient(
+    to right,
+    oklch(0.92 0.12 89.69),
+    oklch(0.85 0.16 89.69),
+    oklch(0.72 0.18 89.69)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
 }
 

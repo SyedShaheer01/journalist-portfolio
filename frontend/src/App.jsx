@@ -9,6 +9,9 @@ import Journalism from './components/pages/Journalism';
 import { Hourglass } from 'react-loader-spinner'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import JournalismSingle from './components/pages/JournalismSingle';
+import Copywriting from './components/pages/Copywriting';
+import CopywritingSingle from './components/pages/CopywritingSingle';
 
 function App() {
   const [loader, setLoader] = useState(true)
@@ -58,9 +61,13 @@ function App() {
       <Route path='/' element={<Home/>}/>
       {/* <Route path='/business' element={}/> */}
       {/* <Route path='/contact' element={}/> */}
-      {/* <Route path='/copywriting' element={}/> */}
       {/* <Route path='/creative' element={}/> */}
+      <Route path='/copywriting' element={<Copywriting/>}/>
+       <Route path="/copywriting/:slug" element={<CopywritingSingle/>} />
       <Route path='/journalism' element={<Journalism/>}/>
+       <Route path="/journalism/:slug" element={<JournalismSingle/>} />
+
+
     </Routes>
 
     <Footer/>
