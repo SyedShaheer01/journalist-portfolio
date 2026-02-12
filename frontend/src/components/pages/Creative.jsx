@@ -132,9 +132,10 @@ const Creative = () => {
         <Container>
           <div className=" mb-14">
             {/* <div className="h-px w-12 bg-accent"></div> */}
-            <h2 className="font-heading text-3xl mb-2 font-semibold text-[oklch(0.85_0.16_89.69)]">
-              Selected Creative Projects
-            </h2>
+          <h2 className="font-heading text-2xl sm:text-3xl mb-2 font-semibold text-[oklch(0.85_0.16_89.69)]">
+            Selected Creative Projects
+          </h2>
+
              <hr className="creative-hr"/>
           </div>
 

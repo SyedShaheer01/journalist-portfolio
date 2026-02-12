@@ -173,6 +173,13 @@
   border: 2px solid #f5bc13;
   }
 
+  @media (max-width: 768px) {
+    .creative-hr{
+      width: 250px;
+    }
+  }
+
+
   .hero-img{
     /* width: 700px; */
     height: 500px;
