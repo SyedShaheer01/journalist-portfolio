@@ -116,7 +116,7 @@
 .about-container{
   display: flex !important;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: center;
 }
 .about-info{
   max-width: 600px;
@@ -162,6 +162,12 @@
   }
   .copywriting-hr{
      width: 280px;
+  /* margin: auto; */
+  margin-left: 15px;
+  border: 2px solid #f5bc13;
+  }
+  .creative-hr{
+     width: 320px;
   /* margin: auto; */
   margin-left: 15px;
   border: 2px solid #f5bc13;

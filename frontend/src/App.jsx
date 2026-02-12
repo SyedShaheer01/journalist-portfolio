@@ -12,6 +12,7 @@ import 'aos/dist/aos.css'
 import JournalismSingle from './components/pages/JournalismSingle';
 import Copywriting from './components/pages/Copywriting';
 import CopywritingSingle from './components/pages/CopywritingSingle';
+import Creative from './components/pages/Creative';
 
 function App() {
   const [loader, setLoader] = useState(true)
@@ -61,7 +62,7 @@ function App() {
       <Route path='/' element={<Home/>}/>
       {/* <Route path='/business' element={}/> */}
       {/* <Route path='/contact' element={}/> */}
-      {/* <Route path='/creative' element={}/> */}
+      <Route path='/creative' element={<Creative/>}/>
       <Route path='/copywriting' element={<Copywriting/>}/>
        <Route path="/copywriting/:slug" element={<CopywritingSingle/>} />
       <Route path='/journalism' element={<Journalism/>}/>

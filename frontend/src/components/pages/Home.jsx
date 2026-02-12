@@ -21,14 +21,14 @@ const Home = () => {
               Syed <span className="text-[oklch(0.85_0.16_89.69)]">Jaffer Imam </span>
             </h1>
 
-            <p className="mt-4 text-white text-lg">
+            {/* <p className="mt-4 text-white text-lg">
               Journalist | Copywriter | Storyteller | Content Creator
-            </p>
+            </p> */}
 
             <p className="mt-6 max-w-xl text-white leading-relaxed">
               I am a journalist and writer with experience in news reporting,
               long-form features, copywriting, and creative storytelling, 
-              focused on clarity, impact, and meaningful narratives.
+              focused on impact, and growth.
             </p>
 
           <div className="mt-8 flex gap-4">
@@ -108,23 +108,20 @@ const Home = () => {
 
 
           <p className="text-secondary leading-relaxed mb-4 about-info">
-            I work at the intersection of journalism, copywriting, and creative 
-            storytelling. My background includes reporting on current affairs,
-            writing in-depth features, and crafting clear, engaging content for 
-            digital platforms.
+            I have over 4 years of experience in journalism and creative storytelling.
+             My work focuses on reporting rural issues, sports, and historical sites,
+              while creating clear, engaging content for digital platforms.
           </p>
           
           <p className="text-secondary leading-relaxed mb-4 about-info">
-            I work at the intersection of journalism, copywriting, and creative 
-            storytelling. My background includes reporting on current affairs,
-            writing in-depth features, and crafting clear, engaging content for 
-            digital platforms.
+           Alongside journalism, I also work on direct response copywriting,
+            video scripts, poetry, and short films.
           </p>
 
-          <p className="text-secondary leading-relaxed about-info">
+          {/* <p className="text-secondary leading-relaxed about-info">
             Beyond journalism, I explore creative writing, poetry, and scripts,
             allowing <br /> me to approach stories with both structure and imagination.
-          </p>
+          </p> */}
         </div>
                   </div>
 
