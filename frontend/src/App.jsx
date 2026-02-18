@@ -13,6 +13,8 @@ import JournalismSingle from './components/pages/JournalismSingle';
 import Copywriting from './components/pages/Copywriting';
 import CopywritingSingle from './components/pages/CopywritingSingle';
 import Creative from './components/pages/Creative';
+import Blog from './components/pages/Blog';
+import BlogSingle from './components/pages/Blogsingle';
 
 function App() {
   const [loader, setLoader] = useState(true)
@@ -62,6 +64,8 @@ function App() {
       <Route path='/' element={<Home/>}/>
       {/* <Route path='/business' element={}/> */}
       {/* <Route path='/contact' element={}/> */}
+      <Route path="/blog" element={<Blog/>} />
+      <Route path="/blog/:slug" element={<BlogSingle/>} />
       <Route path='/creative' element={<Creative/>}/>
       <Route path='/copywriting' element={<Copywriting/>}/>
        <Route path="/copywriting/:slug" element={<CopywritingSingle/>} />

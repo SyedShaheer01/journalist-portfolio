@@ -28,7 +28,7 @@ const Navbar = () => {
           <li><Link to="/journalism">Journalism</Link></li>
           <li><Link to="/copywriting">Copywriting</Link></li>
           <li><Link to="/creative">Creative</Link></li>
-          <li><Link to="/blogs">Blog</Link></li>
+          <li><Link to="/blog">Blog</Link></li>
           <li><Link to="/mybook">Mybook</Link></li>
           <li><Link to="/contact">Contact</Link></li>
          </ul>

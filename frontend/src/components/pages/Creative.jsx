@@ -104,28 +104,7 @@ const Creative = () => {
       </section>
 
       {/* Creative Categories */}
-      <section className="pb-24 pt-5">
-        <div className="flex justify-center items-center mb-8">
-          <img src={CreativeImg} alt="img" width={250} height={250} />
-        </div>
-        <Container>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {creativeCategories.map((item, index) => (
-              <div
-                key={index}
-                className="border border-[oklch(0.85_0.16_89.69)] rounded-xl p-8 "
-              >
-                <h3 className="font-heading text-xl mb-4">
-                  {item.title}
-                </h3>
-                <p className="text-secondary leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+     
 
       {/* Creative Projects (Admin Controlled Cards) */}
       <section className="py-24 bg-[oklch(0.36_0.05_171.92)]">
@@ -173,6 +152,29 @@ const Creative = () => {
         </Container>
       </section>
 
+
+         <section className="pb-24 pt-5">
+        <div className="flex justify-center items-center mb-8">
+          <img src={CreativeImg} alt="img" width={250} height={250} />
+        </div>
+        <Container>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            {creativeCategories.map((item, index) => (
+              <div
+                key={index}
+                className="border border-[oklch(0.85_0.16_89.69)] rounded-xl p-8 "
+              >
+                <h3 className="font-heading text-xl mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-secondary leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
     </div>
     //   <Footer />
     // </PageWrapper>
