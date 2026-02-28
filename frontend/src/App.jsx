@@ -61,16 +61,16 @@ function App() {
     <Navbar/>
 
     <Routes>
-      <Route path='/' element={<Home/>}/>
       {/* <Route path='/business' element={}/> */}
       {/* <Route path='/contact' element={}/> */}
+      <Route path='/' element={<Home/>}/>
       <Route path="/blog" element={<Blog/>} />
       <Route path="/blog/:slug" element={<BlogSingle/>} />
       <Route path='/creative' element={<Creative/>}/>
       <Route path='/copywriting' element={<Copywriting/>}/>
        <Route path="/copywriting/:slug" element={<CopywritingSingle/>} />
       <Route path='/journalism' element={<Journalism/>}/>
-       <Route path="/journalism/:slug" element={<JournalismSingle/>} />
+       {/* <Route path="/journalism/:slug" element={<JournalismSingle/>} /> */}
 
 
     </Routes>
