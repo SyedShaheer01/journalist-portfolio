@@ -9,14 +9,14 @@ import Journalism from './components/pages/Journalism';
 import { Hourglass } from 'react-loader-spinner'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import JournalismSingle from './components/pages/JournalismSingle';
+// import JournalismSingle from './components/pages/JournalismSingle';
 import Copywriting from './components/pages/Copywriting';
 import CopywritingSingle from './components/pages/CopywritingSingle';
 import Creative from './components/pages/Creative';
 import Blog from './components/pages/Blog';
 import BlogSingle from './components/pages/Blogsingle';
-import Poetry from './components/pages/poetry';
-import PoetrySingle from './components/pages/PoetrySingle';
+// import Poetry from './components/pages/poetry';
+// import PoetrySingle from './components/pages/PoetrySingle';
 
 function App() {
   const [loader, setLoader] = useState(true)
@@ -72,8 +72,8 @@ function App() {
       <Route path='/copywriting' element={<Copywriting/>}/>
        <Route path="/copywriting/:slug" element={<CopywritingSingle/>} />
       <Route path='/journalism' element={<Journalism/>}/>
-      <Route path="/poetry" element={<Poetry/>} />
-      <Route path="/poetry/:slug" element={<PoetrySingle/>} /> 
+      {/* <Route path="/poetry" element={<Poetry/>} /> */}
+      {/* <Route path="/poetry/:slug" element={<PoetrySingle/>} />  */}
        {/* <Route path="/journalism/:slug" element={<JournalismSingle/>} /> */}
 
 
