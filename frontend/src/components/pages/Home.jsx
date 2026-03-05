@@ -61,8 +61,8 @@ const Home = () => {
               </button>
               </Link>
 
-              <Link to={'/copywriting'}>
-               <button
+           <Link to={'/copywriting'} className="hidden md:inline-block">
+  <button
     className="
       px-8 py-3
       bg-accent text-white
@@ -76,8 +76,7 @@ const Home = () => {
   >
     Copy writing
   </button>
-    </Link>
-
+</Link>
   
             </div>
 

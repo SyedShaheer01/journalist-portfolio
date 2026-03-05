@@ -156,18 +156,3 @@ export default Journalism;
 
 
 
-
-
-
-
-// px-8 py-3
-//       bg-accent text-black
-//       border border-[oklch(0.85_0.16_89.69)]
-//       rounded-[20px]
-//       cursor-pointer
-//       text-sm
-//       transition-colors duration-500
-//       hover:bg-[oklch(0.85_0.16_89.69)]
-
-
-//  text-[oklch(0.85_0.16_89.69)]
