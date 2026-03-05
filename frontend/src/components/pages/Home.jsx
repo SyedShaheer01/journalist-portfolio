@@ -4,6 +4,7 @@ import aboutImg from '../../assets/images/IMG_0615,JPG.png'
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import '../../App.css'
+import { Link } from "react-router-dom";
 
 
 
@@ -32,6 +33,8 @@ const Home = () => {
             </p>
 
           <div className="mt-8 flex gap-4">
+            
+    <Link to={'/journalism'}>
   <button
     className="
       px-8 py-3
@@ -44,15 +47,38 @@ const Home = () => {
       hover:bg-[oklch(0.85_0.16_89.69)]
     "
   >
-    View My Work
+    Journalism
   </button>
+    </Link>
 
+  <Link to={'/creative'}>
               <button className="
               transition-colors duration-300
            hover:bg-[oklch(0.71_0.15_88.14)]
               px-8 py-3 text-sm cursor-pointer text-white rounded-[5px] bg-[oklch(0.85_0.16_89.69)]">
-                Contact Me
+              
+               Creative
               </button>
+              </Link>
+
+              <Link to={'/copywriting'}>
+               <button
+    className="
+      px-8 py-3
+      bg-accent text-white
+      border border-[oklch(0.85_0.16_89.69)]
+      rounded-[5px]
+      cursor-pointer
+      text-sm
+      transition-colors duration-300
+      hover:bg-[oklch(0.85_0.16_89.69)]
+    "
+  >
+    Copy writing
+  </button>
+    </Link>
+
+  
             </div>
 
            <div className="flex gap-3 mt-6">

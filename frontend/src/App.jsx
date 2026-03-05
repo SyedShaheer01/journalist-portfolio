@@ -15,6 +15,8 @@ import CopywritingSingle from './components/pages/CopywritingSingle';
 import Creative from './components/pages/Creative';
 import Blog from './components/pages/Blog';
 import BlogSingle from './components/pages/Blogsingle';
+import Poetry from './components/pages/poetry';
+import PoetrySingle from './components/pages/PoetrySingle';
 
 function App() {
   const [loader, setLoader] = useState(true)
@@ -70,6 +72,8 @@ function App() {
       <Route path='/copywriting' element={<Copywriting/>}/>
        <Route path="/copywriting/:slug" element={<CopywritingSingle/>} />
       <Route path='/journalism' element={<Journalism/>}/>
+      <Route path="/poetry" element={<Poetry/>} />
+      <Route path="/poetry/:slug" element={<PoetrySingle/>} /> 
        {/* <Route path="/journalism/:slug" element={<JournalismSingle/>} /> */}
 
 
