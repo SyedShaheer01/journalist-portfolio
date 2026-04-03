@@ -81,25 +81,36 @@ const Home = () => {
             </div>
 
            <div className="flex gap-3 mt-6">
+
+            <Link to={'https://www.facebook.com/syedjafferimam12/'}>
         <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[oklch(0.85_0.16_89.69)] text-white hover:scale-105 transition cursor-pointer">
           <FaFacebookF />
         </div>
+            </Link>
 
+              {/* <Link>
         <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[oklch(0.85_0.16_89.69)] text-white hover:scale-105 transition cursor-pointer">
           <FaXTwitter />
         </div>
+              </Link> */}
 
+              <Link to={'https://www.instagram.com/syedjaffer_imam/'}>
         <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[oklch(0.85_0.16_89.69)] text-white hover:scale-105 transition cursor-pointer">
           <FaInstagram />
         </div>
+            </Link>
 
+              <Link to={'https://youtube.com/@syedjafferimam5789?si=HXHSKhB2MGK9kmgP'}>
         <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[oklch(0.85_0.16_89.69)] text-white hover:scale-105 transition cursor-pointer">
           <FaYoutube />
         </div>
+              </Link>
 
+              <Link to={'https://in.linkedin.com/in/syed-jaffer-imam-352a16125'}>
         <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[oklch(0.85_0.16_89.69)] text-white hover:scale-105 transition cursor-pointer">
           <FaLinkedinIn />
         </div>
+              </Link>
       </div>
 
           </div>

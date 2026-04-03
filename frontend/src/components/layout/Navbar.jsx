@@ -29,7 +29,7 @@ const Navbar = () => {
           <li><Link to="/copywriting">Copywriting</Link></li>
           <li><Link to="/creative">Creative</Link></li>
           <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/mybook">Mybook</Link></li>
+          <li><Link to="/books">Mybook</Link></li>
           <li><Link to="/contact">Contact</Link></li>
          </ul>
         </div>
@@ -57,8 +57,8 @@ const Navbar = () => {
           <li><Link to="/journalism" onClick={() => setOpen(false)}>Journalism</Link></li>
           <li><Link to="/copywriting" onClick={() => setOpen(false)}>Copywriting</Link></li>
           <li><Link to="/creative" onClick={() => setOpen(false)}>Creative</Link></li>
-          <li><Link to="/blogs" onClick={() => setOpen(false)}>Blog</Link></li>
-          <li><Link to="/mybook" onClick={() => setOpen(false)}>Mybook</Link></li>
+          <li><Link to="/blog" onClick={() => setOpen(false)}>Blog</Link></li>
+          <li><Link to="/books" onClick={() => setOpen(false)}>Mybook</Link></li>
           <li><Link to="/contact" onClick={() => setOpen(false)}>Contact</Link></li>
           </ul>
         </div>
