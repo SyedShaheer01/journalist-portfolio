@@ -1,14 +1,17 @@
 import { useState } from "react";
-import ClipLoader from "react-spinners/ClipLoader";
+import { ClipLoader } from "react-spinners";
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import { useNavigate } from "react-router-dom";
+
 
 
 const LoginModal = () => {
-    
+  
   const [currstate, setCurr] = useState("Login");
   const [spinner, setSpinner] = useState(false);
   const [token, setToken] = useState("");
+  const navigate = useNavigate();
 
   const [data, setData] = useState({
     name: "",
@@ -68,6 +71,13 @@ const LoginModal = () => {
         icon: "success"
       });
       setSpinner(false)
+      navigate("/dashboard")
+
+       setData({
+    name: "",
+    email: "",
+    password: "",
+  });
     })
     .catch(err=>{
       console.log(err)
@@ -77,6 +87,11 @@ const LoginModal = () => {
         text: err.response.data.message
       });
       setSpinner(false)
+       setData({
+    name: "",
+    email: "",
+    password: "",
+  });
     })
   }
 
@@ -150,7 +165,7 @@ const LoginModal = () => {
           >
             {currstate === "Signup" ? "Create Account" : "Login"}
 
-            {spinner && <ClipLoader color="white" size={14} />}
+            { spinner && <ClipLoader color="white" size={14} /> }
           </button>
 
           {/* Checkbox */}

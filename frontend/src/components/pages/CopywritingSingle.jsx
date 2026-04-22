@@ -4,41 +4,61 @@ import { useParams, Link } from "react-router-dom";
 // import Footer from "../components/layout/Footer";
 // import Container from "../components/ui/Container";
 import Container from "../ui/Container";
+import React, { useEffect, useState } from 'react'
+import axios from "axios"
 
-const mockSamples = [
-  {
-    slug: "brand-awareness-ad-campaign",
-    title: "Brand Awareness Ad Campaign",
-    type: "Advertising Copy",
-    content: `
-      This campaign focused on creating emotional resonance while maintaining
-      clarity and brevity. The messaging strategy emphasized brand recall and
-      audience relatability.
-    `,
-  },
-  {
-    slug: "product-launch-video-script",
-    title: "Product Launch Video Script",
-    type: "Script Writing",
-    content: `
-      A structured script designed to introduce the product, highlight the
-      problem, and present the solution within a concise narrative format.
-    `,
-  },
-  {
-    slug: "corporate-website-homepage-copy",
-    title: "Corporate Website Homepage Copy",
-    type: "Website Copy",
-    content: `
-      Homepage copy crafted to communicate services clearly, build trust, and
-      guide users toward conversion without aggressive sales language.
-    `,
-  },
-];
+
+// const mockSamples = [
+//   {
+//     slug: "brand-awareness-ad-campaign",
+//     title: "Brand Awareness Ad Campaign",
+//     type: "Advertising Copy",
+//     content: `
+//       This campaign focused on creating emotional resonance while maintaining
+//       clarity and brevity. The messaging strategy emphasized brand recall and
+//       audience relatability.
+//     `,
+//   },
+//   {
+//     slug: "product-launch-video-script",
+//     title: "Product Launch Video Script",
+//     type: "Script Writing",
+//     content: `
+//       A structured script designed to introduce the product, highlight the
+//       problem, and present the solution within a concise narrative format.
+//     `,
+//   },
+//   {
+//     slug: "corporate-website-homepage-copy",
+//     title: "Corporate Website Homepage Copy",
+//     type: "Website Copy",
+//     content: `
+//       Homepage copy crafted to communicate services clearly, build trust, and
+//       guide users toward conversion without aggressive sales language.
+//     `,
+//   },
+// ];
 
 const CopywritingSingle = () => {
+
+     const [data, setData] = useState([]);
+
+
+     // ✅ Fetch API
+  useEffect(() => {
+    axios.get("http://localhost:8000/api/copywriting/list")
+      .then(res => {
+        const apiData = res.data.data;
+
+        setData(apiData);
+
+      })
+      .catch(err => console.log(err))
+  }, [])
+  
+
   const { slug } = useParams();
-  const sample = mockSamples.find((s) => s.slug === slug);
+  const sample = data.find((s) => s.slug === slug);
 
   if (!sample) {
     return (

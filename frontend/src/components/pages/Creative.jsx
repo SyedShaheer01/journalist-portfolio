@@ -44,6 +44,11 @@ const Creative = () => {
 
   const creativeProjects = [
     {
+      title: "Hawai Chppal Films",
+      image: Chappal,
+      link: "https://www.instagram.com/reel/DXRtexbk2zp/?igsh=MWc5eTVhZ3R1emtxcg==",
+    },
+    {
       title: "Panjatani Kids",
       image: Panjatani,
         link:"https://www.instagram.com/reel/DKmJF8HIMtj/?igsh=MXFkdDNta2x1N2M5bg=",
@@ -52,11 +57,6 @@ const Creative = () => {
       title: "Nawa e sukhan",
       image: Nawa,
       link: "https://www.instagram.com/reel/DTiHKKpjHDF/?igsh=c3c5ODY4eXB0OGls",
-    },
-    {
-      title: "Hawai Chppal Films",
-      image: Chappal,
-      link: "https://www.instagram.com/reel/DRUoymtjCvV/?igsh=bmVyOXl2cHZ6ZTQx",
     },
     {
       title: "Kahani Kohinoor",

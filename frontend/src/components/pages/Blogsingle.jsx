@@ -1,43 +1,62 @@
 import { useParams, Link } from "react-router-dom";
 import Container from "../ui/Container";
 import '../../App.css'
+import React, { useEffect, useState } from 'react'
+import axios from "axios"
 
 
-const mockPosts = [
-  {
-    slug: "evolution-of-modern-journalism",
-    title: "The Evolution of Modern Journalism",
-    // category: "Journalism",
-    // date: "March 12, 2025",
-    content: `
-      Modern journalism has undergone significant transformation due to
-      technological advancements. Digital platforms have shifted the way
-      audiences consume information.
 
-      Today, speed and accuracy must coexist. Journalists are required to
-      balance real-time reporting with responsible verification.
+// const mockPosts = [
+//   {
+//     slug: "evolution-of-modern-journalism",
+//     title: "The Evolution of Modern Journalism",
+//     // category: "Journalism",
+//     // date: "March 12, 2025",
+//     content: `
+//       Modern journalism has undergone significant transformation due to
+//       technological advancements. Digital platforms have shifted the way
+//       audiences consume information.
 
-      The future of journalism lies in adaptability and audience trust.
-    `,
-  },
-  {
-    slug: "why-storytelling-matters",
-    title: "Why Storytelling Matters in Branding",
-    // category: "Copywriting",
-    // date: "April 02, 2025",
-    content: `
-      Storytelling creates emotional connection between brands and audiences.
-      It allows businesses to communicate values, not just services.
+//       Today, speed and accuracy must coexist. Journalists are required to
+//       balance real-time reporting with responsible verification.
 
-      In a saturated digital environment, narratives differentiate brands.
-      Strong stories build loyalty and long-term recognition.
-    `,
-  },
-];
+//       The future of journalism lies in adaptability and audience trust.
+//     `,
+//   },
+//   {
+//     slug: "why-storytelling-matters",
+//     title: "Why Storytelling Matters in Branding",
+//     // category: "Copywriting",
+//     // date: "April 02, 2025",
+//     content: `
+//       Storytelling creates emotional connection between brands and audiences.
+//       It allows businesses to communicate values, not just services.
+
+//       In a saturated digital environment, narratives differentiate brands.
+//       Strong stories build loyalty and long-term recognition.
+//     `,
+//   },
+// ];
 
 const BlogSingle = () => {
+
+  const [data, setData] = useState([]);
+
+
+     // ✅ Fetch API
+  useEffect(() => {
+    axios.get("http://localhost:8000/api/blog/list")
+      .then(res => {
+        const apiData = res.data.data;
+
+        setData(apiData);
+
+      })
+      .catch(err => console.log(err))
+  }, [])
+
   const { slug } = useParams();
-  const post = mockPosts.find((p) => p.slug === slug);
+  const post = data.find((p) => p.slug === slug);
 
   if (!post) {
     return (

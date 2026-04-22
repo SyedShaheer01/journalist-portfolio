@@ -4,6 +4,12 @@ import cors from "cors";
 // import "dotenv/config.js"
 import mongoose from "./config/index.js";
 import userRouter from "./routes/userRoute.js";
+import journalismRouter from "./routes/journalismRoute.js";
+import path from 'path'
+import bodyParser from 'body-parser'
+import blogRouter from "./routes/blogRoute.js";
+import writingRouter from "./routes/writingRoute.js";
+
 
 
 dotenv.config();
@@ -13,6 +19,11 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 
@@ -30,6 +41,11 @@ app.get("/", (req, res) => {
 
 
 app.use('/user', userRouter)
+app.use('/api/journalism', journalismRouter)
+app.use('/api/blog', blogRouter)
+app.use('/api/copywriting', writingRouter)
+app.use('/images', express.static(path.join('/tmp', 'uploads')));
+
 
 // PORT
 const PORT = process.env.PORT || 8000;

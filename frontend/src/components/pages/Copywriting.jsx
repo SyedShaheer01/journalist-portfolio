@@ -6,8 +6,27 @@ import { Link } from "react-router-dom";
 import Container from "../ui/Container";
 import CTAImg from '../../assets/images/IMG_0622,JPG-removebg-preview-Picsart-AiImageEnhancer.png'
 import CopyImg from '../../assets/images/IMG_0617-removebg-preview-Picsart-AiImageEnhancer.png'
+import React, { useEffect, useState } from 'react'
+import axios from "axios"
+
 
 const Copywriting = () => {
+
+  const [data, setData] = useState([]);
+
+
+     // ✅ Fetch API
+  useEffect(() => {
+    axios.get("http://localhost:8000/api/copywriting/list")
+      .then(res => {
+        const apiData = res.data.data;
+
+        setData(apiData);
+
+      })
+      .catch(err => console.log(err))
+  }, [])
+
   const copyTypes = [
     {
       title: "Advertising Copy",
@@ -36,29 +55,29 @@ const Copywriting = () => {
     },
   ];
 
-  const samples = [
-    {
-      title: "Brand Awareness Ad Campaign",
-      slug: "brand-awareness-ad-campaign",
-      type: "Advertising Copy",
-      excerpt:
-        "A campaign focused on building brand recall through concise messaging and emotional triggers.",
-    },
-    {
-      title: "Product Launch Video Script",
-      slug: "product-launch-video-script",
-      type: "Script Writing",
-      excerpt:
-        "A structured script guiding viewers from problem to solution in under 60 seconds.",
-    },
-    {
-      title: "Corporate Website Homepage Copy",
-      slug: "corporate-website-homepage-copy",
-      type: "Website Copy",
-      excerpt:
-        "Homepage copy designed to explain services clearly while building trust.",
-    },
-  ];
+  // const samples = [
+  //   {
+  //     title: "Brand Awareness Ad Campaign",
+  //     slug: "brand-awareness-ad-campaign",
+  //     type: "Advertising Copy",
+  //     excerpt:
+  //       "A campaign focused on building brand recall through concise messaging and emotional triggers.",
+  //   },
+  //   {
+  //     title: "Product Launch Video Script",
+  //     slug: "product-launch-video-script",
+  //     type: "Script Writing",
+  //     excerpt:
+  //       "A structured script guiding viewers from problem to solution in under 60 seconds.",
+  //   },
+  //   {
+  //     title: "Corporate Website Homepage Copy",
+  //     slug: "corporate-website-homepage-copy",
+  //     type: "Website Copy",
+  //     excerpt:
+  //       "Homepage copy designed to explain services clearly while building trust.",
+  //   },
+  // ];
 
   return (
     // <PageWrapper>
@@ -120,7 +139,7 @@ const Copywriting = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-14">
-            {samples.map((item, index) => (
+            {data.map((item, index) => (
               <article key={index} className="border border-[oklch(0.85_0.16_89.69)] p-5 rounded-[10px]">
                 <p className="text-secondary text-xs uppercase tracking-wider mb-2 ">
                   {item.type}
