@@ -17,6 +17,7 @@ import Blog from './components/pages/Blog';
 import BlogSingle from './components/pages/Blogsingle';
 import Contact from './components/pages/Contact';
 import MyBooks from './components/pages/Mybook';
+import MyProducts from './components/pages/MyProducts';
 // import AdminAuth from './components/pages/adminAuth';
 // import Poetry from './components/pages/poetry';
 // import PoetrySingle from './components/pages/PoetrySingle';
@@ -77,6 +78,7 @@ function App() {
       <Route path='/journalism' element={<Journalism/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path="/books" element={<MyBooks/>} />
+      <Route path="/products" element={<MyProducts/>} />
       {/* <Route path="/admin" element={<AdminAuth/>} /> */}
       {/* <Route path="/poetry" element={<Poetry/>} /> */}
       {/* <Route path="/poetry/:slug" element={<PoetrySingle/>} />  */}

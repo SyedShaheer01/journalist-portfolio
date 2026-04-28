@@ -17,7 +17,7 @@ const Copywriting = () => {
 
      // ✅ Fetch API
   useEffect(() => {
-    axios.get("http://localhost:8000/api/copywriting/list")
+    axios.get("https://journalist-backend.vercel.app/api/copywriting/list")
       .then(res => {
         const apiData = res.data.data;
 

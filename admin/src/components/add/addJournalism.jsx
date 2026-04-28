@@ -44,7 +44,7 @@ function Add() {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/journalism/add",
+        "https://journalist-backend.vercel.app/api/journalism/add",
         formData
       )
 

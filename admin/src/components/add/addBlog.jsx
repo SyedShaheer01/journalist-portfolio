@@ -46,7 +46,7 @@ function AddBlog() {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/blog/add",
+        "https://journalist-backend.vercel.app/api/blog/add",
         formData
       )
 

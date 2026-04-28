@@ -9,6 +9,8 @@ import path from 'path'
 import bodyParser from 'body-parser'
 import blogRouter from "./routes/blogRoute.js";
 import writingRouter from "./routes/writingRoute.js";
+import productRouter from "./routes/productRoute.js";
+import codeRouter from "./routes/refCodeRoute.js";
 
 
 
@@ -44,6 +46,8 @@ app.use('/user', userRouter)
 app.use('/api/journalism', journalismRouter)
 app.use('/api/blog', blogRouter)
 app.use('/api/copywriting', writingRouter)
+app.use('/api/product', productRouter)
+app.use('/api/refcode', codeRouter)
 app.use('/images', express.static(path.join('/tmp', 'uploads')));
 
 

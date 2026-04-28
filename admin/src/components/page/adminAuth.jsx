@@ -29,7 +29,7 @@ const LoginModal = () => {
    setSpinner(true)
   if(currstate === "Signup"){
     try {
-      await axios.post("http://localhost:8000/user/signup",data)
+      await axios.post("https://journalist-backend.vercel.app/user/signup",data)
       .then(res=>{
         console.log("response",res)
        
@@ -58,7 +58,7 @@ const LoginModal = () => {
     
   }
   else{
-    axios.post("http://localhost:8000/user/login",data)
+    axios.post("https://journalist-backend.vercel.app/user/login",data)
     .then(res=>{
       console.log(res)
       setSpinner(false)

@@ -39,7 +39,7 @@ function AddWork() {
 
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/copywriting/add",
+        "https://journalist-backend.vercel.app/api/copywriting/add",
         formData
       )
 

@@ -10,7 +10,7 @@ function List() {
 
   // Fetch products
   useEffect(() => {
-    axios.get("http://localhost:8000/api/journalism/list")
+    axios.get("https://journalist-backend.vercel.app/api/journalism/list")
       .then(res => {
         setProduct(res.data.data)
       })
@@ -19,7 +19,7 @@ function List() {
 
   // Delete product
   const deleteProduct = (id) => {
-    axios.post("http://localhost:8000/api/journalism/remove", { id })
+    axios.post("https://journalist-backend.vercel.app/api/journalism/remove", { id })
       .then(res => {
         Swal.fire({
           title: res.data.message,

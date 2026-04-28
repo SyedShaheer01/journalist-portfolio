@@ -30,6 +30,7 @@ const Navbar = () => {
           <li><Link to="/creative">Creative</Link></li>
           <li><Link to="/blog">Blog</Link></li>
           <li><Link to="/books">Mybook</Link></li>
+          <li><Link to="/products">MyProduct</Link></li>
           <li><Link to="/contact">Contact</Link></li>
          </ul>
         </div>
@@ -59,6 +60,7 @@ const Navbar = () => {
           <li><Link to="/creative" onClick={() => setOpen(false)}>Creative</Link></li>
           <li><Link to="/blog" onClick={() => setOpen(false)}>Blog</Link></li>
           <li><Link to="/books" onClick={() => setOpen(false)}>Mybook</Link></li>
+          <li><Link to="/products" onClick={() => setOpen(false)}>MyProduct</Link></li>
           <li><Link to="/contact" onClick={() => setOpen(false)}>Contact</Link></li>
           </ul>
         </div>

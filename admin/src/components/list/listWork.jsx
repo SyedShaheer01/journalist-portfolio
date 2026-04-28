@@ -10,7 +10,7 @@ function ListWork() {
 
   // Fetch products
   useEffect(() => {
-    axios.get("http://localhost:8000/api/copywriting/list")
+    axios.get("https://journalist-backend.vercel.app/api/copywriting/list")
       .then(res => {
         setProduct(res.data.data)
       })
@@ -19,7 +19,7 @@ function ListWork() {
 
   // Delete product
   const deleteProduct = (id) => {
-    axios.post("http://localhost:8000/api/copywriting/remove", { id })
+    axios.post("https://journalist-backend.vercel.app/api/copywriting/remove", { id })
       .then(res => {
         Swal.fire({
           title: res.data.message,
