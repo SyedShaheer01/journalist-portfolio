@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import './List.css'
+// import './List.css'
 import axios from 'axios'
 import Swal from 'sweetalert2'
 import '../list/list.css'
