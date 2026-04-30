@@ -1,40 +1,52 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Container from "../ui/Container";
 import Swal from "sweetalert2";
 import axios from "axios";
 
 const MyProducts = () => {
   // 🔥 ADMIN DATA (later from backend)
-  const products = [
-    {
-      id: 1,
-      title: "Premium Writing Course",
-      description:
-        "Learn professional storytelling and content writing techniques.",
-      price: 5000,
-      image:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200",
-    },
-    {
-      id: 2,
-      title: "Copywriting Mastery",
-      description:
-        "Master high-converting copywriting for brands and businesses.",
-      price: 8000,
-      image:
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200",
-    },
-  ];
+  // const products = [
+  //   {
+  //     id: 1,
+  //     title: "Premium Writing Course",
+  //     description:
+  //       "Learn professional storytelling and content writing techniques.",
+  //     price: 5000,
+  //     image:
+  //       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200",
+  //   },
+  //   {
+  //     id: 2,
+  //     title: "Copywriting Mastery",
+  //     description:
+  //       "Master high-converting copywriting for brands and businesses.",
+  //     price: 8000,
+  //     image:
+  //       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200",
+  //   },
+  // ];
 
   // 🔥 REF CODE STATE
   const [code, setCode] = useState("");
   const [discount, setDiscount] = useState(0);
+  const [products, setProduct] = useState([]);
+
+  useEffect(()=>{
+     
+    axios.get("https://journalist-backend.vercel.app/api/product/list")
+
+    .then(res=>{
+      setProduct(res.data.data)
+
+    })
+
+  },[])
 
   // 🔥 APPLY CODE (API BASED)
   const applyCode = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:8000/api/refcode/apply-code",  
+        "https://journalist-backend.vercel.app/api/refcode/apply-code",  
         { code: code }
       );
 
@@ -136,12 +148,12 @@ const MyProducts = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
 
-            {products.map((product) => {
+            {products.map((product,index) => {
               const finalPrice = getFinalPrice(product.price);
 
               return (
                 <div
-                  key={product.id}
+                  key={index}
                   className="group border border-[oklch(0.85_0.16_89.69)] rounded-2xl overflow-hidden bg-white"
                 >
 

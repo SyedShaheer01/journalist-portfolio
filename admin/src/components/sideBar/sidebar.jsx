@@ -52,6 +52,39 @@ function SideBar({ detail, setDetail }) {
           <span>List work sample</span>
         </div>
 
+        <div
+          onClick={() => setDetail(prev => prev === "addProduct" ? "" : "addProduct")}
+          className={detail === "addProduct" ? "active" : 'side-options'}
+        >
+          <img src={assets.add_icon} alt="add product" />
+          <span>Add Product</span>
+        </div>
+
+         <div
+          onClick={() => setDetail(prev => prev === "listProduct" ? "" : "listProduct")}
+          className={detail === "listProduct" ? "active" : 'side-options'}
+        >
+          <img src={assets.order_icon} alt="list product" />
+          <span>List Product</span>
+        </div>
+
+         <div
+          onClick={() => setDetail(prev => prev === "addCode" ? "" : "addCode")}
+          className={detail === "addCode" ? "active" : 'side-options'}
+        >
+          <img src={assets.add_icon} alt="add code" />
+          <span>Add Code</span>
+        </div>
+
+         <div
+          onClick={() => setDetail(prev => prev === "listCode" ? "" : "listCode")}
+          className={detail === "listCode" ? "active" : 'side-options'}
+        >
+          <img src={assets.order_icon} alt="list code" />
+          <span>List Code</span>
+        </div>
+
+
       </div>
     </div>
   )

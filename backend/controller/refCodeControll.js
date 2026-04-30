@@ -44,6 +44,7 @@ export const addRefCode = async (req, res) => {
 
     res.json({
       success: true,
+      message: "Code added successfully",
       data: saved,
     });
 
