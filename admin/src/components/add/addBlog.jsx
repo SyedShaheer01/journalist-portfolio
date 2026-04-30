@@ -46,8 +46,14 @@ function AddBlog() {
 
     try {
       const res = await axios.post(
-        "https://journalist-backend.vercel.app/api/blog/add",
-        formData
+        "https://journalist-backend.vercel.app/api/blog/add",{
+
+          formData,
+          
+          headers: {
+            "Content-Type": "multipart/form-data"
+          }
+      }
       )
 
       console.log(res)
