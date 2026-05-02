@@ -26,7 +26,7 @@ function ListBlog() {
 
   // 🔥 FETCH BLOGS
   useEffect(() => {
-    axios.get("http://localhost:8000/api/blog/list")
+    axios.get("https://journalist-portfolio-backend.vercel.app/api/blog/list")
       .then(res => {
         setProduct(res.data.data)
       })
@@ -35,7 +35,7 @@ function ListBlog() {
 
   // ❌ DELETE
   const deleteProduct = (id) => {
-    axios.post("http://localhost:8000/api/blog/remove", { id })
+    axios.post("https://journalist-portfolio-backend.vercel.app/api/blog/remove", { id })
       .then(res => {
         Swal.fire({
           title: res.data.message,
@@ -89,7 +89,7 @@ function ListBlog() {
     }
 
     axios.put(
-      `http://localhost:8000/api/blog/update/${editData._id}`,
+      `https://journalist-portfolio-backend.vercel.app/api/blog/update/${editData._id}`,
       formData
     )
       .then(res => {

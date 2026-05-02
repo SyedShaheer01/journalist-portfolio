@@ -71,7 +71,7 @@ function ListProduct() {
     }
 
     axios.put(
-      `http://localhost:8000/api/product/update/${editData._id}`,
+      `https://journalist-portfolio-backend.vercel.app/api/product/update/${editData._id}`,
       formData
     )
       .then(res => {
