@@ -17,10 +17,7 @@ function AddBlog() {
     slug: "",
     excerpt: "",
     content: ""
-    // date: "",
-    // publication:"",
-    // link:"",
-    // label:""
+    
   })
 
   const onChangeHandler = (event) => {
@@ -40,17 +37,15 @@ function AddBlog() {
     formData.append("excerpt", data.excerpt)
     formData.append("content", data.content)
     formData.append("image", image)
-    // formData.append("publication", data.publication)
-    // formData.append("link", data.link)
-    // formData.append("label", data.label)
+    
 
     try {
       const res = await axios.post(
-        "https://journalist-backend.vercel.app/api/blog/add",
+        "https://journalist-portfolio-backend.vercel.app/api/blog/add",
         formData
       )
 
-      console.log(res)
+      // console.log(res)
 
       Swal.fire({
         title: res.data.message,
@@ -65,17 +60,14 @@ function AddBlog() {
           slug: "",
           excerpt: "",
           content: ""
-        //   date: "",
-        //   publication: "",
-        //   link: "",
-        //   label: ""
+     
         })
 
         setImage(false)
       }
 
     } catch (error) {
-      console.log(error)
+      // console.log(error)
 
       Swal.fire({
         icon: "error",

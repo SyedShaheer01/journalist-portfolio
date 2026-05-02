@@ -33,7 +33,7 @@ const MyProducts = () => {
 
   useEffect(()=>{
      
-    axios.get("https://journalist-backend.vercel.app/api/product/list")
+    axios.get("https://journalist-portfolio-backend.vercel.app/api/product/list")
 
     .then(res=>{
       setProduct(res.data.data)
@@ -46,7 +46,7 @@ const MyProducts = () => {
   const applyCode = async () => {
     try {
       const res = await axios.post(
-        "https://journalist-backend.vercel.app/api/refcode/apply-code",  
+        "https://journalist-portfolio-backend.vercel.app/api/refcode/apply-code",  
         { code: code }
       );
 

@@ -2,12 +2,14 @@ import express from "express";
 import {
   listBlog,
   removeBlog,
+  updateBlog
 } from "../controller/blogControl.js";
 import blog from "../modal/blog.js";
 import cloudinary from '../config/cloudinary.js'
 import path from 'path'
 import { mkdirp } from 'mkdirp'
 import multer from 'multer'
+
 
 
 // import upload from "../middleware/upload.js";
@@ -67,5 +69,8 @@ blogRouter.post("/add", upload.single("image"),async(req,res)=>{
 blogRouter.get("/list", listBlog);
 
 blogRouter.post("/remove", removeBlog);
+
+// ✏️ UPDATE BLOG (WITH IMAGE)
+blogRouter.put("/update/:id", upload.single("image"), updateBlog);
 
 export default blogRouter;

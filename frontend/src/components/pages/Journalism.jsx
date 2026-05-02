@@ -14,7 +14,7 @@ const Journalism = () => {
 
   // ✅ Fetch API
   useEffect(() => {
-    axios.get("https://journalist-backend.vercel.app/api/journalism/list")
+    axios.get("https://journalist-portfolio-backend.vercel.app/api/journalism/list")
       .then(res => {
         const apiData = res.data.data;
 

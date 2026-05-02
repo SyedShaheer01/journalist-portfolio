@@ -10,7 +10,7 @@ function ListCode() {
 
   // Fetch products
   useEffect(() => {
-    axios.get("https://journalist-backend.vercel.app/api/refcode/list")
+    axios.get("https://journalist-portfolio-backend.vercel.app/api/refcode/list")
       .then(res => {
         setProduct(res.data.data)
       })
@@ -19,7 +19,7 @@ function ListCode() {
 
   // Delete product
   const deleteProduct = (id) => {
-    axios.post("https://journalist-backend.vercel.app/api/refcode/remove", { id })
+    axios.post("https://journalist-portfolio-backend.vercel.app/api/refcode/remove", { id })
       .then(res => {
         Swal.fire({
           title: res.data.message,

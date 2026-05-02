@@ -45,7 +45,7 @@ const BlogSingle = () => {
 
      // ✅ Fetch API
   useEffect(() => {
-    axios.get("https://journalist-backend.vercel.app/api/blog/list")
+    axios.get("https://journalist-portfolio-backend.vercel.app/api/blog/list")
       .then(res => {
         const apiData = res.data.data;
 

@@ -35,11 +35,11 @@ function AddProduct() {
    
     try {
       const res = await axios.post(
-        "https://journalist-backend.vercel.app/api/product/add",
+        "https://journalist-portfolio-backend.vercel.app/api/product/add",
         formData
       )
 
-      console.log(res)
+      // console.log(res)
 
       Swal.fire({
         title: res.data.message,
@@ -59,7 +59,7 @@ function AddProduct() {
       }
 
     } catch (error) {
-      console.log(error)
+      // console.log(error)
 
       Swal.fire({
         icon: "error",

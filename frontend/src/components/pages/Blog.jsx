@@ -1,8 +1,4 @@
 import { Link } from "react-router-dom";
-// import PageWrapper from "../components/layout/PageWrapper";
-// import Navbar from "../components/layout/Navbar";
-// import Footer from "../components/layout/Footer";
-// import Container from "../components/ui/Container";
 import Container from "../ui/Container";
 import '../../App.css'
 import React, { useEffect, useState } from 'react'
@@ -17,7 +13,7 @@ const Blog = () => {
 
      // ✅ Fetch API
   useEffect(() => {
-    axios.get("https://journalist-backend.vercel.app/api/blog/list")
+    axios.get("https://journalist-portfolio-backend.vercel.app/api/blog/list")
       .then(res => {
         const apiData = res.data.data;
 

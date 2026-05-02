@@ -33,11 +33,11 @@ function AddCode() {
    
     try {
       const res = await axios.post(
-        "https://journalist-backend.vercel.app/api/refcode/add",
+        "https://journalist-portfolio-backend.vercel.app/api/refcode/add",
         formData
       )
 
-      console.log(res)
+      // console.log(res)
 
       Swal.fire({
         title: res.data.message,
@@ -55,7 +55,7 @@ function AddCode() {
       }
 
     } catch (error) {
-      console.log(error)
+      // console.log(error)
 
       Swal.fire({
         icon: "error",

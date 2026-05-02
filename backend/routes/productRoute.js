@@ -2,6 +2,7 @@ import express from "express";
 import {
   listProduct,
   removeProduct,
+  updateProduct,
 } from "../controller/productControl.js";
 import Product from "../modal/product.js";
 import cloudinary from '../config/cloudinary.js'
@@ -66,5 +67,8 @@ productRouter.post("/add", upload.single("image"),async(req,res)=>{
 productRouter.get("/list", listProduct);
 
 productRouter.post("/remove", removeProduct);
+
+productRouter.put("/update/:id", upload.single("image"), updateProduct);
+
 
 export default productRouter;
